@@ -1,15 +1,22 @@
 
 const menuToggle = document.getElementById('menuToggle');
 const mainNav = document.getElementById('mainNav');
+function closeNavigation() {
+  if (!menuToggle || !mainNav) return;
+  mainNav.classList.remove('open');
+  menuToggle.setAttribute('aria-expanded', 'false');
+  menuToggle.setAttribute('aria-label', 'Open navigation');
+}
 if (menuToggle && mainNav) {
   menuToggle.addEventListener('click', () => {
     const isOpen = mainNav.classList.toggle('open');
     menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
   });
-  document.querySelectorAll('.main-nav a').forEach(link => link.addEventListener('click', () => {
-    mainNav.classList.remove('open');
-    menuToggle.setAttribute('aria-expanded', 'false');
-  }));
+  document.querySelectorAll('.main-nav a').forEach(link => link.addEventListener('click', closeNavigation));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeNavigation();
+  });
 }
 
 document.querySelectorAll('.dropdown-trigger').forEach(trigger => {
@@ -47,3 +54,5 @@ document.querySelectorAll('.demo-form').forEach(form => {
     form.reset();
   });
 });
+
+if (window.lucide) window.lucide.createIcons();
