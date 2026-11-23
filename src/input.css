@@ -3,5 +3,24 @@
 @source "../*.html";
 @source "../assets/*.js";
 
-/* Existing TEFA UHT tokens and layout are compiled through Tailwind CLI. */
-@import "../assets/styles.css";
+@theme {
+  --color-ink: #10231C;
+  --color-ink-soft: #3D5449;
+  --color-muted: #6B7F76;
+  --color-line: #DCE3DD;
+  --color-paper: #FBFAF6;
+  --color-cream: #F4EFE3;
+  --color-sage: #E4EDE6;
+  --color-forest: #14432F;
+  --color-forest-deep: #0B2A1E;
+  --color-accent: #D9822B;
+  --color-accent-soft: #F6E3CE;
+  --color-success: #2E7D4F;
+  --color-warning: #A8621A;
+  --color-danger: #B42318;
+  --font-display: "Manrope", system-ui, sans-serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --font-editorial: "Instrument Serif", Georgia, serif;
+}
+
+@import "./components.css";
