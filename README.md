@@ -1,59 +1,30 @@
-# TEFA UHT — Company Profile
+# TEFA UHT Dashboard — Monitoring Produksi
 
-Company profile website for **TEFA UHT** — a Teaching Factory at Politeknik Negeri Jember focused on dairy processing, campus production, and pilot-scale R&D.
+Dashboard statis untuk memantau ringkasan kapasitas produksi, daftar produk susu UHT, dan catatan uji coba TEFA UHT Politeknik Negeri Jember.
 
-**Learning · Production · Innovation**
+**Kapasitas produksi: 1.000 liter per batch.**
 
----
+## Anggota & Peran
 
-## About
+| Peran| Nama| Tanggung Jawab|
+|---|---|---|
+| Ketua / Maintainer| Haikal Idris| Repo, review, merge PR|
+| Frontend| Kasih Nehemia| Halaman ringkasan kapasitas|
+| Data Produk| Ghaly Lanang| Halaman daftar produk & status uji|
+| Dokumentasi & QA| Vini Ksatria| README, testing, Issue bug|
+| Reviewer Tambahan| Saleh Omary| Konsistensi data & penamaan branch|
 
-TEFA UHT is a Teaching Factory (*Teaching Factory – Ultra High Temperature*) at Politeknik Negeri Jember, East Java, Indonesia. It integrates vocational education, food processing, and applied product development into a single pilot-scale environment.
+## Aturan Branch
+- `feature/<nama-fitur>` — fitur baru
+- `fix/<nama-bug>` — perbaikan bug
+- `docs/<nama-dokumen>` — dokumentasi
 
-This repository contains the public **company profile website**: a static HTML/CSS/JS prototype prepared for design review, stakeholder approval, and handoff to production.
+## Aturan Commit
+- `feat: ...` — fitur baru
+- `fix: ...` — perbaikan
+- `docs: ...` — dokumentasi
 
-The site's three main functions reflected throughout:
-
-| Pillar | Scope |
-|---|---|
-| **Education & Learning** | Student practicum, equipment operation, SOP familiarity, quality control |
-| **Production** | Fresh milk processing, pasteurized milk, sterilized & UHT milk, packaging |
-| **Research & Development** | Formulation, process trials, pilot-scale production, industry collaboration |
-
----
-
-## Project Status
-
-**Prototype — ready for review, not yet for public launch.**
-
-| Area | Status |
-|---|---|
-| Pages & navigation | ✅ Complete (12 pages) |
-| Design system | ✅ Complete (`assets/styles.css`) |
-| Interaction & forms | ✅ Demo-only (no backend) |
-| Facility photography | ⚠️ Illustrative stock placeholders |
-| Contact details | ⚠️ Dummy (pending official confirmation) |
-| Partner logos / brand assets | ❌ Not included |
-| Certifications (SNI, BPOM, Halal) | ❌ Not claimed — under process |
-| Analytics / SEO | ❌ Not configured |
-| Backend form handling | ❌ Not implemented |
-
-> Do **not** promote this repository as an official institutional website until the items above are confirmed by the TEFA UHT manager and Humas POLIJE.
-
----
-
-## Technology Stack
-
-Plain HTML, one shared stylesheet, one shared script. **No build step. No framework. No package manager.**
-
-| Layer | Choice |
-|---|---|
-| Markup | Semantic HTML5 |
-| Styling | Hand-written CSS (custom properties, no preprocessor) |
-| Interactivity | Vanilla JavaScript (`assets/main.js`, ~40 lines) |
-| Typography | Google Fonts — Manrope, DM Sans, Instrument Serif |
-| Imagery | Unsplash (illustrative placeholders — replace before launch) |
-
----
-
-## Repository Structure
+## Aturan Pull Request
+- Minimal **1 reviewer approval**
+- Dilarang push langsung ke `main`
+- Setiap PR wajib menyertakan `Closes #<nomor-issue>`
