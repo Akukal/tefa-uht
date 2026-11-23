@@ -2,7 +2,7 @@
 
 Dashboard statis untuk memantau ringkasan kapasitas produksi, daftar produk susu UHT, dan catatan uji coba TEFA UHT Politeknik Negeri Jember.
 
-**Kapasitas produksi: 1.000 liter per batch.**
+**Kapasitas produksi: 1.000 liter per batch (2 batch/hari, 8 jam operasi).**
 
 ## Anggota & Peran
 
