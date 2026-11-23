@@ -944,10 +944,11 @@ em {
     color: var(--cream)
 }
 
-.form-panel input:focus,
-.form-panel select:focus,
-.form-panel textarea:focus {
-    outline: none;
+.form-panel input:focus-visible,
+.form-panel select:focus-visible,
+.form-panel textarea:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
     border-color: var(--forest);
     background: #fff;
     box-shadow: 0 0 0 4px rgba(20, 67, 47, .1)
