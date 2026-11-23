@@ -195,10 +195,7 @@ em {
 
 /* ---------- Topbar ---------- */
 .topbar {
-    background: var(--forest-deep);
-    color: var(--cream);
-    font-size: 12.5px;
-    letter-spacing: .02em
+    display: none;
 }
 
 .topbar-inner {
@@ -1245,8 +1242,18 @@ em {
 }
 
 @media(max-width:900px) {
+    .header-inner {
+        justify-content: space-between;
+    }
+
+    .brand {
+        margin-right: auto;
+    }
+
     .menu-toggle {
-        display: flex
+        display: flex;
+        margin-left: auto;
+        flex-shrink: 0;
     }
 
     .header-cta {
