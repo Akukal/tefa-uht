@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@source "../*.html";
+@source "../assets/*.js";
+
+/* Existing TEFA UHT tokens and layout are compiled through Tailwind CLI. */
+@import "../assets/styles.css";
