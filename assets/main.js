@@ -26,15 +26,38 @@
     }
 
     document.querySelectorAll('form.demo-form').forEach(form => {
+        const submit = form.querySelector('button[type="submit"]');
+        const success = form.querySelector('.form-success');
+        const error = document.createElement('div');
+        error.className = 'form-error';
+        error.setAttribute('role', 'alert');
+        error.textContent = 'Check required fields before sending.';
+        form.insertBefore(error, success);
+
         form.addEventListener('submit', e => {
             e.preventDefault();
-            if (!form.checkValidity()) { form.reportValidity(); return; }
-            const msg = form.querySelector('.form-success');
-            if (msg) {
-                msg.classList.add('show');
-                msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            error.classList.remove('show');
+            success?.classList.remove('show');
+
+            if (!form.checkValidity()) {
+                error.classList.add('show');
+                form.reportValidity();
+                return;
             }
-            form.reset();
+
+            submit.disabled = true;
+            submit.setAttribute('aria-busy', 'true');
+            submit.dataset.label = submit.textContent;
+            submit.textContent = 'Sending...';
+
+            window.setTimeout(() => {
+                submit.disabled = false;
+                submit.removeAttribute('aria-busy');
+                submit.textContent = submit.dataset.label;
+                success?.classList.add('show');
+                form.reset();
+                success?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 350);
         });
     });
 })();
